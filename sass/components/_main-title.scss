@@ -1,0 +1,14 @@
+// Заголовок h1 в ГЕРОЇ
+
+.hero-title {
+  @include font(44px, 900, 60px);
+
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--wite-text-color);
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
