@@ -9,7 +9,7 @@
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
   --akcent-bg-color: #2196f3;
-  --futer-bg-color: #2f303a;
+  --futer-bg-color: #c4c4c4;
   --svg-icon-fill: #afb1b8;
 }
 
@@ -89,7 +89,7 @@ body {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
   display: flex;
@@ -108,14 +108,27 @@ body {
 }
 
 .hero-title {
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.36364;
+  font-family: var(--primary-font-famili);
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--wite-text-color);
+  font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .section-title {
@@ -640,18 +653,43 @@ body {
 }
 
 .hero {
-  background-color: var(--futer-bg-color);
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero.jpg);
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero-mobile.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-color: var(--futer-bg-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/hero-desktop.jpg);
+  }
 }
 
 .feature-list {

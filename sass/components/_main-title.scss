@@ -1,14 +1,32 @@
 // Заголовок h1 в ГЕРОЇ
-
 .hero-title {
-  @include font(44px, 900, 60px);
-
+  // @include font(44px, 900, 60px);
+  font-family: var(--primary-font-famili);
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--wite-text-color);
-  // font-weight: 900;
-  // font-size: 44px;
-  // line-height: 1.36;
+  font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+// 0px - 1199px
+@media screen and (max-width: 1199px) {
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+// 0px - 767px
+@media screen and (max-width: 767px) {
+}
+// 768px +
+@media screen and (min-width: 768px) {
+}
+// 1200px +
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
