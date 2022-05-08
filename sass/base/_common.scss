@@ -3,6 +3,9 @@ body {
   background-color: var(--primary-bg-color);
   font-family: var(--primary-font-famili);
 }
+img {
+  display: block;
+}
 
 .list {
   margin: 0;
