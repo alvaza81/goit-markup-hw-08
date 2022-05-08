@@ -8,32 +8,24 @@
 
 .team-list__lid {
   background-color: var(--primary-bg-color);
-  width: calc((100% - 90px) / 4);
-  margin-right: 30px;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
 }
 
 .team-list__foto {
   display: block;
   max-width: 100%;
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
+  max-height: auto;
 }
 .team-list__description {
-  padding: 30px 59px 0 59px;
+  padding-top: 30px;
   margin-bottom: 16px;
 }
 
 .team-list__title {
-  margin: 0 0 10px 0;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -42,11 +34,84 @@
 }
 
 .team-list__paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0px;
   color: var(--secondary-text-color);
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+// 0px - 1199px
+@media screen and (max-width: 1199px) {
+  .team-list__lid {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+// 0px - 767px
+@media screen and (max-width: 767px) {
+  .team-list {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+  }
+  .team-list__lid:nth-child(4n) {
+    margin-bottom: 0;
+  }
+}
+// 768px +
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-wrap: wrap;
+  }
+  .team-list__lid {
+    max-width: 354px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+}
+// 1200px +
+@media screen and (min-width: 1200px) {
+  .team-list {
+    justify-content: space-between;
+  }
+
+  .team-list__lid {
+    background-color: var(--primary-bg-color);
+    // width: calc((100% - 90px) / 4);
+
+    max-width: 270px;
+    margin: 0;
+  }
+
+  // .team-list__title {
+  //   margin: 0 0 10px 0;
+  //   font-weight: 500;
+  //   font-size: 16px;
+  //   line-height: 1.19;
+  //   text-align: center;
+  //   letter-spacing: 0.03em;
+  // }
+
+  // .team-list__paragraph {
+  //   margin-top: 0;
+  //   margin-bottom: 0;
+  //   color: var(--secondary-text-color);
+  //   font-size: 16px;
+  //   line-height: 1.19;
+  //   text-align: center;
+  //   letter-spacing: 0.03em;
+  // }
 }

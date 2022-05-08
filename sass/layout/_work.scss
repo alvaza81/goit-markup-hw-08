@@ -40,3 +40,9 @@
   justify-content: center;
   align-items: center;
 }
+// 0px - 1199px
+@media screen and (max-width: 1199px) {
+  .no-padding {
+    display: none;
+  }
+}
