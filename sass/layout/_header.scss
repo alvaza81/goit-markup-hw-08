@@ -248,6 +248,10 @@
   }
   .auth-nav__item + .item {
     margin-top: 10px;
+
+    &:nth-child(2) {
+      margin-left: 0px;
+    }
   }
 
   .auth-nav__link {
@@ -305,11 +309,19 @@
   .auth-nav {
     display: flex;
     margin-left: auto;
+    text-align: center;
   }
 
-  .auth-nav__item + .item {
-    margin-left: 30px;
+  .auth-nav__item {
     margin-top: 0;
+    text-align: center;
+
+    &:nth-child(1) {
+      margin-right: 30px;
+    }
+    &:nth-child(2) {
+      margin-top: 0px;
+    }
   }
 
   .auth-nav__link {
